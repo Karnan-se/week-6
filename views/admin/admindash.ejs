@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="css/admin1.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              assign
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/asscending">assending order</a></li>
+              <li><a class="dropdown-item" href="/descending">descending order</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+<!-- wkwqkjefjkenfrjnkjfnqekjfnekjfneqrjkfnqjnflqejknflejknfjernfjrnfjeqwfnqejlknflqenflkeqnfl;enflqernljkqenfkjqnfkjqenfkjeqnfkjeqnfjneqwfjnqewfjwqenkfjnqefjnwqejfwenjofneqojfneqejlfnqljfnqwe         -->
+
+
+        <form class="d-flex" role="search" action="/search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchPattern"
+            name="search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+          <div> <a href="/destroysession"><input type="button" value="logout" id="btn" class=" btn btn-primary btn-lg"></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-1 d-flex">
+  <div class="container userlistContainer">
+    
+    <% for(let i=0;i<users.length;i++) {%>
+      
+        <div class="card  mt-5 mx-5  p-3 col-xxl-4 col-xl-4 col-md-5 col-sm-6">
+            <div class="card-body w-100">
+              <h5 class="card-title ">User details</h5>
+              <p class="card-text "><%= users[i].name %></p>
+              <p class="card-text "><%= users[i].email %></p>
+              <div class="rows d-flex">
+              <a href="/edit/?userId=<%=users[i]._id %>" class="btn btn-primary col-6 mx-1 text-sm-center">edit</a>
+              <a href="/delete/?userId=<%= users[i]._id %>" class="btn btn-danger col-6 text-sm-center">delete</a>
+              </div>
+            </div>
+            
+          </div>
+          
+        <% } %>
+
+        </div>
+        <!-- <div class="col-xxl-4 card  mt-5 text-center">
+          <p>ksd kew n</p>
+
+        </div> -->
+
+       
+        </div>
+</body>
+<script>
+
+
+</script>
+</html>
