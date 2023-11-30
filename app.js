@@ -15,7 +15,7 @@ app.use("/js",express.static("/public/js"))
 app.use(express.urlencoded({extended:true}))
 
 app.use(session({
-    secret:"your-secret-key",
+    secret:"your-secret-keys",
     resave:false,
     saveUninitialized:false,
 }))
